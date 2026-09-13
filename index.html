@@ -22,22 +22,36 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#home">Discovery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/all-products.html">All Products</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/contact.html">Contact us</a></li>
+                <li class="category-menu">
+                    <button class="category-toggle" type="button" aria-expanded="false" aria-controls="categoryDropdown">
+                        Category <span aria-hidden="true">▾</span>
+                    </button>
+                    <ul class="category-dropdown" id="categoryDropdown">
+                        <li><a href="pages/all-products.html?category=Home%20Decor">Home Decor</a></li>
+                        <li><a href="pages/all-products.html?category=Jewelry">Jewelry</a></li>
+                        <li><a href="pages/all-products.html?category=Clothing">Clothing</a></li>
+                        <li><a href="pages/all-products.html?category=Beauty%20%26%20Wellness">Beauty & Wellness</a></li>
+                        <li><a href="pages/all-products.html?category=Art%20%26%20Craft">Art & Craft</a></li>
+                        <li><a href="pages/all-products.html?category=Gifts">Gifts</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-icons">
-                    <button onclick="openSearch()" title="Profile">👤</button>
-                    <button onclick="openWishlist()" title="Wishlist">❤️</button>
-                    <button onclick="openCart()" title="Cart">🛒</button>
+                    <button onclick="window.location.href='pages/profile.html'" title="Profile">👤</button>
+                    <button onclick="window.location.href='pages/wishlist.html'" title="Wishlist">❤️</button>
+                    <button onclick="window.location.href='pages/cart.html'" title="Cart">🛒</button>
                 </div>
+                <button class="admin-btn" onclick="window.location.href='pages/admin/admin.html'">Admin</button>
                 <button class="login-btn" onclick="openLoginModal()">Login</button>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h2>The Art of Handmade Living</h2>
@@ -45,11 +59,20 @@
                 Discover unique, authentic handmade products crafted with love and care.
             </p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="shopNow()">Discovery our collection</button>
+                <button class="btn btn-primary" onclick="window.location.href='pages/all-products.html'">Discover our collection</button>
                 <button class="btn btn-secondary" onclick="openContactModal()">📞 Contact Seller</button>
             </div>
         </div>
     </section>
+
+    <main class="home-content">
+        <section class="content-card about-card">
+            <p class="section-eyebrow">Welcome</p>
+            <h1>Handmade Bliss</h1>
+            <p>Handmade Bliss is an e-commerce shop for beautifully crafted handmade products created by skilled makers and artisans.</p>
+            <p>Explore our growing collection of home decor, clothing, wellness, gifts, and artisan accessories designed to make everyday life more meaningful.</p>
+        </section>
+    </main>
 
     <!-- Login Modal -->
     <div id="loginModal" class="modal">

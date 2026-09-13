@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Handmade Bliss</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" stroke="#8B4513" stroke-width="6" fill="#fff8f0"/>
+                    <text x="50%" y="55%" text-anchor="middle" font-size="50">🧵</text>
+                </svg>
+                <span>Handmade Bliss</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="all-products.html">All Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li class="category-menu">
+                    <button class="category-toggle" type="button" aria-expanded="false" aria-controls="categoryDropdown">
+                        Category <span aria-hidden="true">▾</span>
+                    </button>
+                    <ul class="category-dropdown" id="categoryDropdown">
+                        <li><a href="all-products.html?category=Home%20Decor">Home Decor</a></li>
+                        <li><a href="all-products.html?category=Jewelry">Jewelry</a></li>
+                        <li><a href="all-products.html?category=Clothing">Clothing</a></li>
+                        <li><a href="all-products.html?category=Beauty%20%26%20Wellness">Beauty & Wellness</a></li>
+                        <li><a href="all-products.html?category=Art%20%26%20Craft">Art & Craft</a></li>
+                        <li><a href="all-products.html?category=Gifts">Gifts</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="nav-icons">
+                    <button onclick="window.location.href='profile.html'" title="Profile">👤</button>
+                    <button onclick="window.location.href='wishlist.html'" title="Wishlist">❤️</button>
+                    <button onclick="window.location.href='cart.html'" title="Cart">🛒</button>
+                </div>
+                <button class="admin-btn" onclick="window.location.href='admin/admin.html'">Admin</button>
+                <button class="login-btn" onclick="openLoginModal()">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="content-card contact-card">
+            <p class="section-eyebrow">Get in touch</p>
+            <h1>Contact Handmade Bliss</h1>
+            <div class="contact-details-list">
+                <div class="contact-detail-item">
+                    <h3>Location</h3>
+                    <p>Handmade Bliss Studio</p>
+                    <p>New Delhi, India</p>
+                </div>
+                <div class="contact-detail-item">
+                    <h3>Phone</h3>
+                    <p>+91-9876543210</p>
+                    <p>+91-8765432109</p>
+                </div>
+                <div class="contact-detail-item">
+                    <h3>Email</h3>
+                    <p>hello@homemadebliss.com</p>
+                    <p>support@homemadebliss.com</p>
+                </div>
+                <div class="contact-detail-item">
+                    <h3>Business Hours</h3>
+                    <p>Monday to Saturday</p>
+                    <p>9:00 AM - 6:00 PM IST</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="loginTitle">Sign In</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div id="step1" class="tab-content active">
+                <div class="form-group">
+                    <label>Email or Phone Number</label>
+                    <input type="text" id="emailPhone" placeholder="Enter your email or phone number">
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="nextStep()">Continue</button>
+            </div>
+            <div id="step2" class="tab-content">
+                <div class="form-group">
+                    <label>Email or Phone</label>
+                    <input type="text" id="emailPhoneDisplay" readonly style="background-color: #f5f5f5;">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button class="back-btn" onclick="backStep()">← Back</button>
+                    <button class="submit-btn" onclick="login()">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wishlistModal" class="modal contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>My Wishlist</h2>
+                <button class="close-btn" onclick="closeWishlist()">&times;</button>
+            </div>
+            <div id="wishlistContent">
+                <div class="wishlist-empty">
+                    <p>❤️ Your wishlist is empty</p>
+                    <p style="font-size: 0.9rem; color: #999;">Start adding your favorite products!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Handmade Bliss. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
