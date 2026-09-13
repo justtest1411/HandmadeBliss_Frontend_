@@ -795,4 +795,5 @@ async function submitProduct(event) {
         message.classList.add('error');
         message.textContent = 'We could not add the product. Please try again.';
     }
+
 }
