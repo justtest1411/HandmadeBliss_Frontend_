@@ -54,7 +54,7 @@ const localProducts = categories.flatMap((category, categoryIndex) =>
         image_url: localProductImageUrls[categoryIndex * 5 + productIndex]
     }))
 );
-const productsEndpoint = 'http://127.0.0.1:8000/api/products?limit=100';
+const productsEndpoint = 'https://handmadebliss-backend-6.onrender.com/api/products?limit=100';
 const STORAGE_KEYS = {
     wishlist: 'handmadeBlissWishlist',
     cart: 'handmadeBlissCart'
